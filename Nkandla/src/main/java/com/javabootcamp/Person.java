@@ -52,7 +52,9 @@ public class Person
     }
 
     public enum PersonType{
-      PRESIDENT
+      PRESIDENT,
+      LAWYER,
+      ARCHITECT
     }
 
 
