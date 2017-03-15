@@ -5,17 +5,24 @@ import static org.junit.Assert.*;
 
 public class HomeSteadTest 
 {
+    HomeStead homeStead;
+    
+    @Before
+    public void createInstance()
+    {
+        homeStead = new HomeStead();
+    }
+    
+    
     @Test
     public void testHomeSteadConstructor()
     {
-        HomeStead homeStead = new HomeStead();
         assertEquals(homeStead.getClass(), HomeStead.class);  
     }
     
     @Test
     public void testNameGetterAndSetter()
     {
-        HomeStead homeStead = new HomeStead();
         homeStead.setName("TestName");
         assertEquals(homeStead.getName(), "TestName");
     }
@@ -23,7 +30,6 @@ public class HomeSteadTest
     @Test
     public void testDistrictGetterAndSetter()
     {
-        HomeStead homeStead = new HomeStead();
         homeStead.setDistrict("TestDistrict");
         assertEquals(homeStead.getDistrict(), "TestDistrict");
     }
@@ -31,7 +37,6 @@ public class HomeSteadTest
     @Test
     public void testProvinceGetterAndSetter()
     {
-        HomeStead homeStead = new HomeStead();
         homeStead.setProvince("TestProvince");
         assertEquals(homeStead.getProvince(), "TestProvince");
     }
@@ -39,7 +44,6 @@ public class HomeSteadTest
     @Test
     public void testCountryGetterAndSetter()
     {
-        HomeStead homeStead = new HomeStead();
         homeStead.setCountry("TestCountry");
         assertEquals(homeStead.getCountry(), "TestCountry");
     }

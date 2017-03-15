@@ -5,10 +5,17 @@ import static org.junit.Assert.*;
 
 public class NkandlaTest {
     
+    Nkandla nkandla;
+    
+    @Before
+    public void createInstance()
+    {
+        nkandla = new Nkandla();
+    }
+    
     @Test
     public void testNkandlaConstructor()
     {
-        Nkandla nkandla = new Nkandla();
         assertEquals(nkandla.getClass(), Nkandla.class);  
     }
     

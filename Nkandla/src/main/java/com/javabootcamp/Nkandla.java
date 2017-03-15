@@ -2,5 +2,7 @@ package com.javabootcamp;
 
 public class Nkandla extends HomeStead
 {
-    String 
+    private ChickenRun chickenRun;
+    private SwimmingPool swimmingPool;
+    private Amphitheatre amphitheatre;
 }
