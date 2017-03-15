@@ -48,10 +48,10 @@ public class HomeStead
     }
 
     public void accept(Visitor visitor) throws UnauthorisedVisitorException{
-        if(visitor.getPersonType().equals(Person.PersonType.PRESIDENT))      
+        if(visitor.getPersonType().equals(Person.PersonType.PRESIDENT))
             visitor.visit(this);
         else
-            throw new UnauthorisedVisitorException();
+            throw new UnauthorisedVisitorException("Only presidents can visit Nkandla");
     }
 
 }

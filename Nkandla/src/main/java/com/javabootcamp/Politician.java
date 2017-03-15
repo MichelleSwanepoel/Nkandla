@@ -2,14 +2,13 @@ package com.javabootcamp;
 
 import java.util.Arrays;
 
-public class Politician extends Person
+public class Politician extends Person implements Visitor
 {
-    private HomeStead visiting;
     private PersonType[] employees;
 
     public void setEmployees(PersonType[] _employees)
     {
-        employees = _employees;
+        employees = Arrays.copyOf(_employees, _employees.length);
     }
 
     public PersonType[] getEmployees()
@@ -18,7 +17,6 @@ public class Politician extends Person
     }
 
     public void visit(HomeStead homeStead){
-        visiting = homeStead;
-        System.out.println(this.getName() + ", a " + this.getPersonType() + ", is now visiting " + visiting.getName());
+        System.out.println(this.getName() + ", a " + this.getPersonType() + ", is now visiting " + homeStead.getName());
     }
 }
