@@ -35,7 +35,7 @@ public class PoliticianTest
         assertTrue(Arrays.equals(testEmployees, employees));
         assertFalse(testEmployees == employees);
     }
-    
+
 //    @Test
 //    public void testPoliticianFireEmployeeExists()
 //    {
@@ -43,15 +43,15 @@ public class PoliticianTest
 //        politician.setEmployees([Politician.PersonType.Lawyer, Politician.PersonType.Architect]);
 //        fireSuccess = politician.fireEmployee(Politician.PersonType.Lawyer);
 //        assertTrue(fireSuccess);
-//        
+//
 //        Politician.PersonType[] employees = politician.getEmployees();
-//        
+//
 //    }
 
     @Test
     public void testPoliticianVisit()
     {
-        
+        //TODO: will have to either redirect or mock System.out to test this
     }
 
 }

@@ -52,10 +52,20 @@ public class Person
     }
 
     public enum PersonType{
-      PRESIDENT,
-      LAWYER,
-      ARCHITECT
-    }
+      PRESIDENT("president"),
+      LAWYER("lawyer"),
+      ARCHITECT("architect");
 
+      private String type;
+
+      PersonType(String _type){
+          this.type = _type;
+      }
+
+      @Override
+      public String toString(){
+          return type;
+      }
+    }
 
 }

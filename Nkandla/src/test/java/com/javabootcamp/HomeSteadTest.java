@@ -55,12 +55,18 @@ public class HomeSteadTest
         Visitor visitor = mock(Visitor.class);
 
         when(visitor.getPersonType()).thenReturn(Person.PersonType.PRESIDENT);
-        homeStead.accept(visitor);
+
+        try {
+          homeStead.accept(visitor);
+        } catch (UnauthorisedVisitorException e){
+
+        }
+
         verify(visitor, times(1)).visit(homeStead);
     }
 
     @Test(expected=UnauthorisedVisitorException.class)
-    public void testAcceptFail()
+    public void testAcceptFail() throws UnauthorisedVisitorException
     {
         Visitor visitor = mock(Visitor.class);
 
