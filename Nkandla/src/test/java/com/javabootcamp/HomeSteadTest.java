@@ -50,8 +50,22 @@ public class HomeSteadTest
     }
 
     @Test
-    public void testAccept()
+    public void testAcceptSuccess()
     {
-        //mock the visitor interface        
+        Visitor visitor = mock(Visitor.class);
+
+        when(visitor.getPersonType()).thenReturn(Person.PersonType.PRESIDENT);
+        homeStead.accept(visitor);
+        verify(visitor, times(1)).visit(homeStead);
     }
+
+    @Test(expected=UnauthorisedVisitorException.class)
+    public void testAcceptFail()
+    {
+        Visitor visitor = mock(Visitor.class);
+
+        when(visitor.getPersonType()).thenReturn(Person.PersonType.LAWYER);
+        homeStead.accept(visitor);
+    }
+
 }
